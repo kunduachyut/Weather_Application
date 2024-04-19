@@ -8,18 +8,19 @@ const publicPath = path.join(__dirname,"../public");
 const viewsPath = path.join(__dirname,"../template/views");
 const partionalsPath = path.join(__dirname,"../template/partials");
 
+
+app.set("view engine","hbs");
 app.set("views",viewsPath);
 hbs.registerPartials(partionalsPath);
 app.use(express.static(publicPath));
 
-
-
-const weatherData = require("../utils/weatherData")
+const weatherData = require("../utils/weatherData");
+const { title } = require("process");
 
 const port = process.env.port || 3000;
 
 app.get("/" ,(req,res) => {
-    res.send("Hellow....");
+    res.render("index",{ title: "Weather App" });
 })
 
 app.get("/weather",(req,res) => {
@@ -35,8 +36,8 @@ app.get("/weather",(req,res) => {
 });
 
 app.get("*",(req,res) => {
-    res.send("Invalid...")
-})
+    res.render("404",{ title:"Invalid input" });
+});
 
 app.listen(port,(res,req) => {
     console.log("Server is listening "+port);

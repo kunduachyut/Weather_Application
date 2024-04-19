@@ -34,10 +34,10 @@ h2 {
   height: 550px;
   width: 500px;
   transform: translate(-50%, -50%);
-  background: linear-gradient(120deg, #47bbff, #2b32b2);
+  background: linear-gradient(120deg, #dee60d, #5b953f);
   cursor: pointer;
   border-radius: 20px;
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(164, 53, 53, 0.15);
 }
 
 .weatherLocation{
@@ -50,7 +50,7 @@ h2 {
 
 .weatherLocation button{
   background: #080705;
-  color:#fff;
+  color:#f40808;
   border: 1px solid transparent;
 }
 .weatherLocation input:focus{
@@ -65,7 +65,7 @@ h2 {
   align-items: center;
   justify-content: space-around;
   font-size: 100px;
-  color: white
+  color: rgb(245, 10, 10)
 }
  .widget .weatherIcon i {
   padding-top: 30px;
@@ -93,7 +93,7 @@ h2 {
 }
 .temperature {
   font-size: 55px;
-  color: white;
+  color: rgb(22, 153, 219);
 }
 .place {
   text-align: center;

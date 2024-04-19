@@ -2,8 +2,17 @@ const { log } = require("console");
 const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
-
 const app = express();
+
+const publicPath = path.join(__dirname,"../public");
+const viewsPath = path.join(__dirname,"../template/views");
+const partionalsPath = path.join(__dirname,"../template/partials");
+
+app.set("views",viewsPath);
+hbs.registerPartials(partionalsPath);
+app.use(express.static(publicPath));
+
+
 
 const weatherData = require("../utils/weatherData")
 
